@@ -1,0 +1,4 @@
+libro:
+    resource: "@LibroBundle/Resources/config/routing.yml"
+    prefix:   /
+
