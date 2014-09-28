@@ -36,7 +36,63 @@ class Curso
      *   @ORM\JoinColumn(name="EtapaID", referencedColumnName="ID")
      * })
      */
-    private $etapaid;
+    private $etapa;
 
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Curso
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set etapaid
+     *
+     * @param \Relibros\LibroBundle\Entity\Etapa $etapa
+     * @return Curso
+     */
+    public function setEtapa(\Relibros\LibroBundle\Entity\Etapa $etapa = null)
+    {
+        $this->etapaid = $etapaid;
+
+        return $this;
+    }
+
+    /**
+     * Get etapaid
+     *
+     * @return \Relibros\LibroBundle\Entity\Etapa 
+     */
+    public function getEtapa()
+    {
+        return $this->etapa;
+    }
 }
